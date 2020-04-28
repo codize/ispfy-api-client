@@ -1,0 +1,20 @@
+{
+    "name": "codize/ispfy-api-client",
+    "description": "Cliente para api do Ispfy",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ispfy",
+            "email": "suporte@ispfy.com.br"
+        }
+    ],
+    "require": {
+        "php": "7.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ispfy\\": "src/"
+        }
+    }
+}
