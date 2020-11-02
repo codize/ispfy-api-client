@@ -1,19 +1,22 @@
 # Esta biblioteca auxilia na implementação da Api do Ispfy
 
-## PORTAS DE ACESSSO
+## Documentação completa em
+https://www.ispfy.com.br/api/postman
+
+## Portas de acesso
 * Porta 8020 para HTTP e 8043 para HTTPs (Usar preferencialmente HTTPs pois o conteúdo poderá ser interceptado, inclusive o TOKEN)
 * Liberar no firewall em Sistema > Network > Firewall
 
-## TOKEN DE AUTENTICACAO
+## Token de autenticação
 Deve ser enviado no Header com a tag 'token'
 
-## ESTRUTURA
+## Estrutura
 * As rotas OBJECT retornam uma lista de objetos conforme os filtros (query) da sua rota
 * As rotas TOOL tem query própria
 * As rotas OBJECT e TOOL não compartilham os mesmos filtros
 * O token é individual de cada usuário e herda suas permissões
 
-## ENDPOINTS DISPONIVEIS ATE O MOMENTO
+## Endpoints disponíveis
 * GET  => /object/geofiber/cto
 * GET  => /object/geofiber/spliter
 * GET  => /object/geofiber/spliter/via
@@ -35,7 +38,7 @@ Deve ser enviado no Header com a tag 'token'
 * POST => /tool/assinante/ticket
 
 
-## QUERY PARA ROTAS TOOL
+## Query para rotas do tipo TOOL
 * GET /tool/cobranca/imprimir/{codigo-do-boleto} (Impressão de um boleto pelo código)
 
 * GET /tool/assinante/boleto (Segunda via do boleto, customizado)
@@ -62,7 +65,7 @@ Deve ser enviado no Header com a tag 'token'
   - requisicao: Texto de requisição do assinante (Obrigatório)
 
 
-## QUERY PARA ROTAS OBJECT
+## Query para rotas do tipo OBJECT
 * limit: Limite de registros a serem exibidos 
 	* -1 = Sem limite
 	* default: 10
